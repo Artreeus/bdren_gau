@@ -451,11 +451,11 @@ ul {
   font-family: "Source Sans Pro", sans-serif;
 }
 .react-header .react-menus li a {
-  color: #F8F9FA;
+  color: #00306e;
 }
 .react-header .react-menus li a.react-current-page,
 .react-header .react-menus li a:hover {
-  color: #FFFFFF !important;
+  color: #d2093c !important;
 }
 .react-header .react-main-menu {
   position: relative;
