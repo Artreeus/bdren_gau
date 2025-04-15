@@ -63,8 +63,13 @@ body {
 
 .learn-more-btn:hover {
   background-color: transparent;
-  color: black;
+  color: #318447;
   border: 1px solid #318447;
+}
+
+.menu-toggle #menu-btn {
+  background: #318447;
+  border-color: #318447;
 }
 
 /* Sub Navigation */
@@ -95,9 +100,7 @@ body {
   border-right: none;
 }
 
-.sub-nav a:hover {
-  color: black;
-}
+
 
 /* Breadcrumb */
 .breadcrumb-section {
@@ -161,6 +164,11 @@ body {
   border: none;
   background-color: #318447;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dean-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .dean-image {
@@ -214,6 +222,12 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   background-color: #fff;
+}
+
+/* On hover, slightly move and elevate the card */
+.staff-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 /* Image */
@@ -297,6 +311,12 @@ body {
   color: #777;
 }
 
+
+
+
+
+
+
 @media (max-width: 992px) {
   .dean-info h4 {
     font-size: 1.4rem;
@@ -304,4 +324,5 @@ body {
     margin-bottom: 5px;
     padding-bottom: 5px;
   }
+ 
 }

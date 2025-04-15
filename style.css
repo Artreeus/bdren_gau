@@ -453,10 +453,10 @@ ul {
 .react-header .react-menus li a {
   color: #00306e;
 }
-.react-header .react-menus li a.react-current-page,
+/* .react-header .react-menus li a.react-current-page,
 .react-header .react-menus li a:hover {
   color: #d2093c !important;
-}
+} */
 .react-header .react-main-menu {
   position: relative;
 }

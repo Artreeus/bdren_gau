@@ -4356,6 +4356,7 @@ fieldset:disabled .btn {
   color: #6c757d;
   content: var(--bs-breadcrumb-divider, "/");
 }
+
 .breadcrumb-item.active {
   color: #6c757d;
 }
