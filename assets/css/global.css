@@ -13,23 +13,52 @@ body {
 }
 
 
+.react-header .topbar-area.style1 ul.social-links li a:hover {
+  color: #0ea315;
+}
+
+
 .learn-more-btn {
   background-color: #2a7d2e;
   color: white;
-  border: 1px solid transparent; /* 🛠 prevents layout shift */
+  border: 1px solid transparent;
   padding: 8px 15px;
   border-radius: 5px;
   text-decoration: none;
   font-size: 0.9rem;
-  transition: ease-in-out 0.3s;
+  transition: all 0.3s ease-in-out;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.learn-more-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: #318447;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0;
+}
+
+.learn-more-btn:hover::before {
+  width: 0;
+  height: 0;
+  opacity: 1;
 }
 
 .learn-more-btn:hover {
-  background-color: transparent;
   color: #318447;
   border: 1px solid #318447;
+  transform: scale(1.05);
 }
+
 
 .menu-toggle #menu-btn {
   background: #318447;
@@ -58,6 +87,9 @@ body {
   padding: 8px 20px;
   display: inline-block;
   transition: ease-in-out 0.3s;
+}
+.sub-nav a:hover {
+  color: #ebc105;
 }
 
 .sub-nav a:last-child {
@@ -103,6 +135,9 @@ body {
 
 .react-header .react-menus li a {
   color: #ffffff;
+}
+.react-header .react-menus li a:hover {
+  color: #ebc105;
 }
 
 
