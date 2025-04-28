@@ -282,9 +282,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   background-color: #fff;
-  width: 100%; /* Full width to make it responsive */
-  max-width: 300px; /* Fixed max-width */
-  height: 400px; /* Fixed height */
 }
 
 /* Responsive Adjustments for smaller screens */
@@ -306,16 +303,3 @@
   }
 }
 
-@media (max-width: 768px) {
-  .staff-card {
-    max-width: 200px; /* Smaller max-width on mobile screens */
-    height: 350px; /* Adjust height for mobile */
-  }
-}
-
-@media (max-width: 576px) {
-  .staff-card {
-    max-width: 180px; /* Even smaller on extra small screens */
-    height: 320px; /* Adjust height for small mobile screens */
-  }
-}
