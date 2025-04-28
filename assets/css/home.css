@@ -112,7 +112,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 12px;
-  height: 65%; /* Take 65% of the container height */
+  height: 63%; /* Take 65% of the container height */
 }
 
 /* Right sidebar items - smaller boxes */
@@ -206,7 +206,7 @@
   flex-direction: column;
   gap: 10px;
   height: 35%;
-  padding-top: 10px; 
+  padding-top: 2px; 
 }
 
 .menu-item {

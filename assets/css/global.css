@@ -61,6 +61,7 @@ body {
   color: #343a40;
   padding: 0 6px;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .react-header .topbar-area.style1 ul.social-links li a:hover {
