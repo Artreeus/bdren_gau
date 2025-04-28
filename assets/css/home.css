@@ -210,7 +210,7 @@
 }
 
 .menu-item {
-  background-color: #051c47;
+  background-color: #284705;
   color: white;
   padding: 12px 15px;
   text-align: center;
@@ -548,6 +548,13 @@
   border-bottom: none;
   margin-bottom: 25px;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.notice-section .nav-tabs {
+  border-bottom: none;
+  margin-bottom: 25px;
+  justify-content: left;
   flex-wrap: wrap;
 }
 
