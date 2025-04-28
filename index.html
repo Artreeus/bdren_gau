@@ -264,7 +264,6 @@
                   <path d="M10 14L5 8l5-6v12z" />
                 </svg>
               </button>
-
               <div class="research-slider">
                 <div class="slider-container" id="sliderContainer">
                   <!-- Slide 1 -->
@@ -314,8 +313,8 @@
 
                   <!-- Slide 3 -->
                   <div class="slide-item">
-                    <a href="#"
-                      ><div class="card research-card">
+                    <a href="#">
+                      <div class="card research-card">
                         <img
                           src="./assets/images/img/Badhan-orientation.jpg"
                           alt="Research"
@@ -330,14 +329,14 @@
                             <span>Research Office</span>
                           </div>
                         </div>
-                      </div></a
-                    >
+                      </div>
+                    </a>
                   </div>
 
                   <!-- Slide 4 -->
                   <div class="slide-item">
-                    <a href="#"
-                      ><div class="card research-card">
+                    <a href="#">
+                      <div class="card research-card">
                         <img
                           src="./assets/images/img/Crest_২৮.১২.২৪-scaled.jpg"
                           alt="Awards"
@@ -352,14 +351,14 @@
                             <span>Public Relations</span>
                           </div>
                         </div>
-                      </div></a
-                    >
+                      </div>
+                    </a>
                   </div>
 
-                  <!-- Slide 5 (Additional) -->
+                  <!-- Slide 5 -->
                   <div class="slide-item">
-                    <a href="#"
-                      ><div class="card research-card">
+                    <a href="#">
+                      <div class="card research-card">
                         <img
                           src="./assets/images/img/banner.jpg"
                           alt="Campus Event"
@@ -374,11 +373,11 @@
                             <span>Events Committee</span>
                           </div>
                         </div>
-                      </div></a
-                    >
+                      </div>
+                    </a>
                   </div>
 
-                  <!-- Slide 6 (Additional) -->
+                  <!-- Slide 6 -->
                   <div class="slide-item">
                     <a href="#">
                       <div class="card research-card">
@@ -396,8 +395,8 @@
                             <span>International Affairs</span>
                           </div>
                         </div>
-                      </div></a
-                    >
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -663,7 +662,7 @@
                 <div class="col-md-3 col-6">
                   <div class="resource-card">
                     <div class="icon-container">
-                      <!-- Icon: Monitor -->
+                      <!-- Icon: Play Button for GAU CHANNEL PLUS -->
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -674,9 +673,7 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       >
-                        <rect x="2" y="3" width="20" height="14" />
-                        <line x1="8" y1="21" x2="16" y2="21" />
-                        <line x1="12" y1="17" x2="12" y2="21" />
+                        <polygon points="5,3 19,12 5,21" />
                       </svg>
                     </div>
                     <p>GAU CHANNEL PLUS</p>
@@ -685,7 +682,7 @@
                 <div class="col-md-3 col-6">
                   <div class="resource-card">
                     <div class="icon-container">
-                      <!-- Icon: Calendar -->
+                      <!-- Icon: Calendar for Academic Calendar -->
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -708,7 +705,7 @@
                 <div class="col-md-3 col-6">
                   <div class="resource-card">
                     <div class="icon-container">
-                      <!-- Icon: Clock -->
+                      <!-- Icon: Clock for Activity Calendar -->
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -729,7 +726,7 @@
                 <div class="col-md-3 col-6">
                   <div class="resource-card">
                     <div class="icon-container">
-                      <!-- Icon: Cpu -->
+                      <!-- Icon: Laptop for GAU IT LIFE -->
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -740,11 +737,9 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       >
-                        <rect x="4" y="4" width="16" height="16" rx="2" />
-                        <rect x="9" y="9" width="6" height="6" />
-                        <path
-                          d="M9 1v2M15 1v2M9 21v2M15 21v2M1 9h2M1 15h2M21 9h2M21 15h2"
-                        />
+                        <rect x="4" y="4" width="16" height="12" rx="2" />
+                        <line x1="12" y1="18" x2="12" y2="21" />
+                        <line x1="8" y1="21" x2="16" y2="21" />
                       </svg>
                     </div>
                     <p>GAU IT LIFE</p>
@@ -755,6 +750,7 @@
           </div>
         </div>
       </section>
+
       <!-- university section End -->
 
       <!-- tab setion start  -->
@@ -1168,12 +1164,40 @@
       <!-- Notice section start  -->
       <section class="notice-section">
         <div class="container my-5">
-          <h4 class="text-center mb-4 section-title">Notice</h4>
-          <div class="row justify-content-center" id="notice-container">
-            <!-- JS will populate here -->
+          <h4 class="text-center mb-4 section-title">Notice Board</h4>
+          
+          <!-- Tabs Navigation -->
+          <ul class="nav nav-tabs mb-4" id="noticeTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="notices-tab" data-bs-toggle="tab" data-bs-target="#notices-content" type="button" role="tab" aria-controls="notices-content" aria-selected="true">Notices</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="noc-tab" data-bs-toggle="tab" data-bs-target="#noc-content" type="button" role="tab" aria-controls="noc-content" aria-selected="false">NOC</button>
+            </li>
+          </ul>
+          
+          <!-- Tabs Content -->
+          <div class="tab-content" id="noticeTabsContent">
+            <!-- Notice Tab -->
+            <div class="tab-pane fade show active" id="notices-content" role="tabpanel" aria-labelledby="notices-tab">
+              <div class="row justify-content-center" id="notice-container">
+                <!-- JS will populate here -->
+              </div>
+              <div class="text-center">
+                <button class="btn btn-view">View All Notices</button>
+              </div>
+            </div>
+            
+            <!-- NOC Tab -->
+            <div class="tab-pane fade" id="noc-content" role="tabpanel" aria-labelledby="noc-tab">
+              <div class="row justify-content-center" id="noc-container">
+                <!-- JS will populate here -->
+              </div>
+              <div class="text-center">
+                <button class="btn btn-view">View All NOCs</button>
+              </div>
+            </div>
           </div>
-
-          <button class="btn btn-view">View All Notice</button>
         </div>
       </section>
       <!-- Notice section End    -->

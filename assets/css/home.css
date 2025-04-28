@@ -309,6 +309,35 @@
     font-size: 18px;
   }
 }
+
+
+
+/* research slider  */
+
+
+
+.slide-item {
+  flex: 0 0 auto;
+  width: 450px; /* Fixed width for cards */
+}
+.card.research-card {
+  height: 100%;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  overflow: visible; /* Allow overflow to be visible */
+}
+
+.research-slider {
+  overflow: hidden; /* Contain the slider but allow items to render */
+  position: relative;
+  padding: 0 20px; /* Add some padding to account for the navigation arrows */
+}
+
+
+
 /* vc section  */
 
 .vice-chancellor-section {
@@ -823,6 +852,8 @@ transform: translateY(-4px);
   color: #00844a !important;
 
 }
+
+
 
 /* Gau hero sec  */
 
