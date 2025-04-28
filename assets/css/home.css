@@ -1,5 +1,3 @@
-/* Updated styles for university website */
-
 /* Page container */
 .page-container {
   padding: 20px;
@@ -9,40 +7,41 @@
 /* Top section with carousel and sidebar */
 .top-section {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 0; /* Changed from 20px */
   gap: 20px;
+  height: 500px; /* Set a fixed height for the entire top section */
 }
 
-/* Fixed Carousel section with explicit height */
+/* Carousel section - now takes full height of parent */
 .carousel-section {
   width: 65%;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
-  height: 500px !important; /* Force the height with !important */
+  height: 100%; /* Take full height of parent */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Custom carousel styling with explicit transition */
+/* Custom carousel styling */
 .custom-carousel {
   height: 100%;
   position: relative;
 }
 
 .custom-carousel .carousel-item {
-  display: none; /* Hide all items by default */
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  transition: none; /* Reset any transitions */
+  transition: none;
 }
 
 /* Active item styling */
 .custom-carousel .carousel-item.active {
-  display: block; /* Show only active items */
-  animation: fadeInScale 1.5s ease forwards; /* Apply animation */
+  display: block;
+  animation: fadeInScale 1.5s ease forwards;
 }
 
 /* Create the fade-in-scale animation */
@@ -98,20 +97,29 @@
   right: 20px;
 }
 
-/* Right sidebar positioning adjustment to match new carousel height */
-.right-sidebar {
+/* Right sidebar - reworked to take full height */
+.right-sidebar-container {
   width: 35%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Right sidebar grid - smaller boxes */
+.right-sidebar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 15px;
+  gap: 12px;
+  height: 65%; /* Take 65% of the container height */
 }
 
-/* Right sidebar items */
+/* Right sidebar items - smaller boxes */
 .sidebar-item {
   position: relative;
   color: white;
-  padding: 15px;
+  padding: 12px;
   text-align: center;
   border-radius: 5px;
   transition: all 0.3s ease;
@@ -120,11 +128,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 100%;
   overflow: hidden;
+  height: 100%;
 }
 
 .sidebar-item::before {
@@ -142,13 +150,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* Black overlay with some transparency */
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
   transition: 0s ease-in-out;
 }
 
 .sidebar-item:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
 }
 
 .sidebar-item-content {
@@ -158,28 +166,21 @@
 
 /* Assign background images */
 .sidebar-item:nth-child(1)::before {
-  background-image: url("../images/img/h1.png");
+  background-image: url('../images/my_images/premium_photo-1683887034491-f58b4c4fca72.avif');
 }
 .sidebar-item:nth-child(2)::before {
-  background-image: url("../images/img/h3.png");
+  background-image: url('../images/my_images/premium_photo-1680720885676-81e3bdee4237.avif');
 }
 .sidebar-item:nth-child(3)::before {
-  background-image: url("../images/img/h2.png");
+  background-image: url('../images/my_images/premium_photo-1682974406959-7f7202c932b0.avif');
 }
 .sidebar-item:nth-child(4)::before {
-  background-image: url("../images/img/h4.png");
+  background-image: url('../images/my_images/photo-1504384308090-c894fdcc538d.avif');
 }
 
-/* Middle layout section */
-.middle-section {
-  display: flex;
-  margin-bottom: 20px;
-  gap: 20px;
-}
-
-/* Linear section (university banner) - SIGNIFICANTLY REDUCED HEIGHT */
-.linear-section {
-  width: 65%;
+/* University banner - moved outside page container */
+.university-banner {
+  width: 100%;
   background: linear-gradient(
     90deg,
     #078b55 12%,
@@ -190,21 +191,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  height: 50px; /* Fixed height to match the image */
+  height: 50px;
+  margin-top: 0; 
 }
 
-.linear-section img {
-  max-height: 40px; /* Adjusted to match reduced height */
+.university-banner img {
+  max-height: 40px;
   max-width: 100%;
 }
 
-/* Bottom menu items in the middle section */
+/* Bottom menu items in the right sidebar */
 .bottom-menu {
-  width: 35%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 35%;
+  padding-top: 10px; 
 }
 
 .menu-item {
@@ -221,12 +223,11 @@
   font-size: 16px;
   font-weight: 500;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: 0.2s ease-in-out;
-
+  flex: 1;
 }
 
 .menu-item:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
 }
 
 .menu-item:after {
@@ -234,6 +235,80 @@
   font-weight: bold;
 }
 
+/* Responsive styles */
+@media (max-width: 992px) {
+  .top-section {
+    height: 500px;
+  }
+
+  .right-sidebar {
+    gap: 10px;
+  }
+
+  .sidebar-item {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .carousel-section {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+
+  .right-sidebar-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-sidebar {
+    height: auto;
+    grid-template-rows: repeat(2, 100px);
+    margin-bottom: 20px;
+  }
+
+  .bottom-menu {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .menu-item {
+    height: 50px;
+  }
+
+  .university-banner {
+    height: 40px;
+  }
+
+  .university-banner img {
+    max-height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-section {
+    height: 250px;
+  }
+
+  .right-sidebar {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 80px);
+  }
+
+  .custom-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
 /* vc section  */
 
 .vice-chancellor-section {
