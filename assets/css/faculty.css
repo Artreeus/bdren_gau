@@ -160,12 +160,13 @@
 
 
 /* Staff Section */
+/* Staff Section */
 .staff-section {
-  padding: 60px 0;
+  padding: 40px 0;
   background-color: #f8f9fa;
 }
 
-/* Staff Card Styling */
+/* Staff Card Styling - Base */
 .staff-card {
   margin-bottom: 30px;
   border: none;
@@ -174,10 +175,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   background-color: #fff;
-  width: 300px; /* Fixed width */
-  height: 400px; /* Fixed height */
+  height: 100%; /* Use full height of container */
+  display: flex;
+  flex-direction: column;
 }
-
 
 /* On hover, slightly move and elevate the card */
 .staff-card:hover {
@@ -187,17 +188,9 @@
 
 /* Image */
 .staff-image {
-  height: 250px;
   width: 100%;
   object-fit: cover;
-}
-
-@media (max-width: 767px) {
-  .staff-image {
-    height: 310px;
-    width: 100%;
-    object-fit: cover;
-  }
+  aspect-ratio: 1 / 1; /* Maintain square ratio for images */
 }
 
 /* Card Body */
@@ -205,6 +198,9 @@
   padding: 20px;
   background-color: #318447;
   color: white;
+  flex-grow: 1; /* Allow card body to fill remaining space */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Card Title and Subtitle */
@@ -213,6 +209,7 @@
   font-size: 1.1rem;
   color: white;
   font-weight: 600;
+  word-wrap: break-word;
 }
 
 .staff-card .card-subtitle {
@@ -221,85 +218,115 @@
   font-weight: 400;
   margin-bottom: 15px;
   opacity: 0.9;
+  word-wrap: break-word;
 }
 
 /* Contact Info */
 .staff-contact {
   font-size: 0.85rem;
   margin-bottom: 6px;
+  display: flex;
+  align-items: flex-start;
+  word-break: break-word;
 }
 
-.staff-contact i {
-  width: 18px;
+.staff-contact svg {
+  min-width: 16px;
   margin-right: 6px;
-  color: #fff;
-  opacity: 0.9;
+  margin-top: 3px;
+}
+
+/* Container for staff cards */
+.staff-card-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Academic Affairs */
 .academic-affairs {
-  text-align: center;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-}
-
-.academic-affairs h5 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #343a40;
-}
-
-.academic-affairs p {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-/* Academic Affairs Office */
-.academic-affairs {
   background-color: #e9eef0;
   padding: 15px;
-  width: 400px;
-  margin-bottom: 30px;
+  border-radius: 8px;
   border-left: 4px solid #4a90e2;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
 }
 
 .academic-affairs h5 {
   color: #4a90e2;
   margin-bottom: 5px;
+  font-size: 1.2rem;
 }
 
 .academic-affairs p {
-  font-size: 0.8rem;
-  color: #777;
-}
-/* Staff Card Styling */
-.staff-card {
-  margin-bottom: 30px;
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  background-color: #fff;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0;
 }
 
-/* Responsive Adjustments for smaller screens */
-@media (max-width: 1200px) {
+/* Extra Small Devices (phones) */
+@media (max-width: 575.98px) {
   .staff-card {
-    max-width: 250px; /* Smaller max-width on medium screens */
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .staff-image {
+    height: auto;
+  }
+  
+  .staff-card .card-title {
+    font-size: 1rem;
+  }
+  
+  .staff-card .card-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .staff-contact {
+    font-size: 0.75rem;
   }
 }
 
-@media (max-width: 992px) {
+/* Small Devices (landscape phones) */
+@media (min-width: 576px) and (max-width: 767.98px) {
   .staff-card {
-    max-width: 220px; /* Smaller max-width on tablet-sized screens */
+    max-width: 100%;
   }
-  .dean-info h4 {
-    font-size: 1.4rem;
-    color: white;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
+  
+  .staff-card .card-title {
+    font-size: 1rem;
   }
 }
 
+/* Medium Devices (tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .staff-card {
+    max-width: 100%;
+  }
+  
+  .staff-card .card-title {
+    font-size: 1rem;
+  }
+  
+  .staff-card .card-subtitle {
+    font-size: 0.85rem;
+  }
+}
+
+/* Large Devices (desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .staff-card {
+    max-width: 100%;
+  }
+}
+
+/* Extra Large Devices (large desktops) */
+@media (min-width: 1200px) {
+  .staff-card {
+    max-width: 100%;
+  }
+}
