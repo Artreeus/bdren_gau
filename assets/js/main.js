@@ -320,15 +320,16 @@
   // Course Portfolio Filter
   var pifilter = $('.grid');
   if (pifilter.length) {
-  $('.grid').isotope({
-    itemSelector: '.grid-item',
-  });
-  $('.filter-button-group').on( 'click', 'li', function() {
-    var filterValue = $(this).attr('data-filter');
-    $('.grid').isotope({ filter: filterValue });
-    $('.filter-button-group li').removeClass('active');
-    $(this).addClass('active');
-  });}
+    $('.grid').isotope({
+      itemSelector: '.grid-item',
+    });
+    $('.filter-button-group').on('click', 'li', function () {
+      var filterValue = $(this).attr('data-filter');
+      $('.grid').isotope({ filter: filterValue });
+      $('.filter-button-group li').removeClass('active');
+      $(this).addClass('active');
+    });
+  }
 
 
   //Videos popup jQuery 
@@ -470,231 +471,231 @@
   // trending-slider-5
   let trendingSlider_5 = $('.trendingSlider-5');
   if (trendingSlider_5.length) {
-  var swiper = new Swiper(".trendingSlider-5", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: true,
-    breakpoints: {
-      1500: {
-        slidesPerView: 3,
+    var swiper = new Swiper(".trendingSlider-5", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      centeredSlides: true,
+      breakpoints: {
+        1500: {
+          slidesPerView: 3,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+        0: {
+          slidesPerView: 1,
+        }
       },
-      991: {
-        slidesPerView: 3,
-      },
-      767: {
-        slidesPerView: 2,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
       }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false
-    }
-  });
-}
+    });
+  }
   // trending-slider-5
   let coursesSlider_6 = $('.coursesSlider-6');
   if (coursesSlider_6.length) {
-  var swiper = new Swiper(".coursesSlider-6", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: true,
-    breakpoints: {
-      1500: {
-        slidesPerView: 3,
+    var swiper = new Swiper(".coursesSlider-6", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      centeredSlides: true,
+      breakpoints: {
+        1500: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 2,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+        0: {
+          slidesPerView: 1,
+        }
       },
-      1200: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 2,
-      },
-      767: {
-        slidesPerView: 2,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
       }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false
-    }
-  });
-}
+    });
+  }
   // trending-slider-5
   let testimonialsSlider_5 = $('.testimonialsSlider-5');
   if (testimonialsSlider_5.length) {
-  var swiper = new Swiper(".testimonialsSlider-5", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: true,
-    breakpoints: {
-      1500: {
-        slidesPerView: 1,
+    var swiper = new Swiper(".testimonialsSlider-5", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      centeredSlides: true,
+      breakpoints: {
+        1500: {
+          slidesPerView: 1,
+        },
+        991: {
+          slidesPerView: 1,
+        },
+        767: {
+          slidesPerView: 1,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+        0: {
+          slidesPerView: 1,
+        }
       },
-      991: {
-        slidesPerView: 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
       },
-      767: {
-        slidesPerView: 1,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
+      navigation: {
+        nextEl: ".testimonials-slider-prev-btn",
+        prevEl: ".testimonials-slider-next-btn"
       }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".testimonials-slider-prev-btn",
-      prevEl: ".testimonials-slider-next-btn"
-    }
-  });
-}
+    });
+  }
 
 
   // testimonials-slider
   let testimonialsSlider = $('.testimonialsSlider');
   if (testimonialsSlider.length) {
-  var swiper = new Swiper(".testimonialsSlider", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: true,
-    breakpoints: {
-      1500: {
-        slidesPerView: 3,
+    var swiper = new Swiper(".testimonialsSlider", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      centeredSlides: true,
+      breakpoints: {
+        1500: {
+          slidesPerView: 3,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+        0: {
+          slidesPerView: 1,
+        }
       },
-      991: {
-        slidesPerView: 3,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
       },
-      767: {
-        slidesPerView: 2,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
+      navigation: {
+        nextEl: ".testimonials-button-next",
+        prevEl: ".testimonials-button-prev"
       }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".testimonials-button-next",
-      prevEl: ".testimonials-button-prev"
-    }
-  });
-}
+    });
+  }
   // testimonials-slider
   let testimonialsSlider6 = $('.testimonialsSlider6');
   if (testimonialsSlider6.length) {
-  var swiper = new Swiper(".testimonialsSlider6", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: true,
-    breakpoints: {
-      1500: {
-        slidesPerView: 3,
+    var swiper = new Swiper(".testimonialsSlider6", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      centeredSlides: true,
+      breakpoints: {
+        1500: {
+          slidesPerView: 3,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+        0: {
+          slidesPerView: 1,
+        }
       },
-      991: {
-        slidesPerView: 3,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
       },
-      767: {
-        slidesPerView: 2,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
+      navigation: {
+        nextEl: ".testimonials-slider-next-btn",
+        prevEl: ".testimonials-slider-prev-btn"
       }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".testimonials-slider-next-btn",
-      prevEl: ".testimonials-slider-prev-btn"
-    }
-  });
-}
+    });
+  }
 
 
   // blog-slider
   let blogSlider_5 = $('.blogSlider-5');
   if (blogSlider_5.length) {
-  var swiper = new Swiper(".blogSlider-5", {
-    slidesPerView: 4,
-    slidesPerColumn: 4,
-    spaceBetween: 20,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    breakpoints: {
-      1500: {
-        slidesPerView: 4,
+    var swiper = new Swiper(".blogSlider-5", {
+      slidesPerView: 4,
+      slidesPerColumn: 4,
+      spaceBetween: 20,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      breakpoints: {
+        1500: {
+          slidesPerView: 4,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+        0: {
+          slidesPerView: 1,
+        }
       },
-      991: {
-        slidesPerView: 3,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
       },
-      767: {
-        slidesPerView: 2,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
+      navigation: {
+        nextEl: ".blog-slider-next-btn",
+        prevEl: ".blog-slider-prev-btn"
       }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".blog-slider-next-btn",
-      prevEl: ".blog-slider-prev-btn"
-    }
-  });
-}
+    });
+  }
 
-  $(document).on('click', '.navigation-btn', function() {
+  $(document).on('click', '.navigation-btn', function () {
     var show = $(this).data('show');
     $(show).removeClass("hide").siblings().addClass("hide");
   });
-  
-  $(document).on('click', '.navigation-btn', function(){
+
+  $(document).on('click', '.navigation-btn', function () {
     $(this).addClass('active').siblings().removeClass('active')
   })
 
@@ -711,47 +712,47 @@
   // Common-slider
   let swiperCommon = $('.swiperCommon');
   if (swiperCommon.length) {
-  var swiper = new Swiper(".swiperCommon", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: true,
-    breakpoints: {
-      1500: {
-        slidesPerView: 3,
+    var swiper = new Swiper(".swiperCommon", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      centeredSlides: true,
+      breakpoints: {
+        1500: {
+          slidesPerView: 3,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+        0: {
+          slidesPerView: 1,
+        }
       },
-      991: {
-        slidesPerView: 3,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
       },
-      767: {
-        slidesPerView: 2,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
+      navigation: {
+        nextEl: ".testimonials-slider-next-btn",
+        prevEl: ".testimonials-slider-prev-btn"
       }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".testimonials-slider-next-btn",
-      prevEl: ".testimonials-slider-prev-btn"
-    }
-  });
-}
+    });
+  }
 
-  $(document).on('click', '.navigation-btn', function() {
+  $(document).on('click', '.navigation-btn', function () {
     var show = $(this).data('show');
     $(show).removeClass("hide").siblings().addClass("hide");
   });
-  
-  $(document).on('click', '.navigation-btn', function(){
+
+  $(document).on('click', '.navigation-btn', function () {
     $(this).addClass('active').siblings().removeClass('active')
   })
 
@@ -764,32 +765,32 @@
     });
   });
 
-  
-
-// Image popups
-$('#image-popups').magnificPopup({
-  delegate: 'a',
-  type: 'image',
-  image: {
-            verticalFit: true
-          },
-  removalDelay: 500,
-  callbacks: {
-    beforeOpen: function() {
-       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-       this.st.mainClass = this.st.el.attr('data-effect');
-    }
-  },
-  closeOnContentClick: false,
-  midClick: true
-});
 
 
-// Home Seven QNA Dropdown
-$(document).on('click', '.question', function(){
-  var element = $(this).parent(".qna-dropdown-item");
-  element.toggleClass('show').siblings().removeClass('show')
-})
+  // Image popups
+  $('#image-popups').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    image: {
+      verticalFit: true
+    },
+    removalDelay: 500,
+    callbacks: {
+      beforeOpen: function () {
+        this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+        this.st.mainClass = this.st.el.attr('data-effect');
+      }
+    },
+    closeOnContentClick: false,
+    midClick: true
+  });
+
+
+  // Home Seven QNA Dropdown
+  $(document).on('click', '.question', function () {
+    var element = $(this).parent(".qna-dropdown-item");
+    element.toggleClass('show').siblings().removeClass('show')
+  })
 
 
 })(jQuery);

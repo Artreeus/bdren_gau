@@ -1,7 +1,7 @@
 
 (function ($) {
     "use strict";
-    
+
     $.fn.backResponsiveMenu = function (options) {
 
         //Back default options
@@ -68,7 +68,7 @@
                 if ($backmenu.hasClass('collapse') === true) {
                     return false;
                 }
-              
+
                 $(this).parent('li').siblings().children('.sub-menu').slideUp();
                 $(this).parent().addClass('menu-active').children('.sub-menu').slideDown();
                 return;
@@ -131,7 +131,7 @@
                     var elm = $('ul:first', this);
                     var off = elm.offset();
                     var l = off.left;
-                    var w = elm.width();                    
+                    var w = elm.width();
                     var docW = $("body").width();
                     var isEntirelyVisible = (l + w <= docW);
                     if (!isEntirelyVisible) {
@@ -139,16 +139,16 @@
                     }
                 }
             });
-                                           
+
             //Hash Anchor
-            $('.react-menus li a').each(function(){
-               var href = $(this).attr("href");
-               if(href == "#"){
-                   $(this).addClass('hash');
-               }else{
-                   $(this).removeClass('hash');
-               }
-            });               
+            $('.react-menus li a').each(function () {
+                var href = $(this).attr("href");
+                if (href == "#") {
+                    $(this).addClass('hash');
+                } else {
+                    $(this).removeClass('hash');
+                }
+            });
 
             //End of responsive menu function
         });

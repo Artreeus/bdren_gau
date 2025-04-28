@@ -58,39 +58,6 @@ body {
 }
 
 
-/* Breadcrumb */
-.breadcrumb-section {
-  background-color: #fff;
-  padding: 10px 0;
-  font-size: 0.8rem;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.breadcrumb-container {
-  display: flex;
-  padding: 20px;
-  align-items: center;
-}
-
-.breadcrumb-item {
-  background-color: #ddd;
-  padding: 5px 12px;
-  margin-right: 10px;
-  border-radius: 4px;
-  display: inline-block;
-  position: relative;
-}
-
-.breadcrumb-item:not(:last-child):after {
-  content: "›";
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #999;
-}
-/* Add these styles to your about-faculty.css file */
 
 .achievements {
   background-color: #343a40;

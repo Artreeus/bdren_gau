@@ -1,19 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap");
-
-/* body font  */
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  padding: 0;
- 
-}
 
 /* Faculty Banner Section */
 .faculty-banner {
@@ -25,7 +9,6 @@ body {
 .banner-text {
   padding: 20px;
   color: #333;
-  text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,12 +18,22 @@ body {
 
 .banner-text h2 {
   color: #2a7d2e;
-  margin-bottom: 15px;
+  text-align: right;
+  line-height: 36px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0 15px;
 }
 
 .banner-text p {
   font-size: 0.9rem;
-  margin-bottom: 20px;
+  text-align: right;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.banner-text .button-container {
+  align-self: flex-end;
 }
 
 .banner-image {
@@ -49,22 +42,8 @@ body {
   object-fit: cover;
 }
 
-.learn-more-btn {
-  background-color: #2a7d2e;
-  color: white;
-  border: 1px solid transparent; /* 🛠 prevents layout shift */
-  padding: 8px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: ease-in-out 0.3s;
-  box-sizing: border-box;
-}
-
-.learn-more-btn:hover {
-  background-color: transparent;
-  color: #318447;
-  border: 1px solid #318447;
+.banner-image-container{
+  padding: 0;
 }
 
 .menu-toggle #menu-btn {
@@ -100,40 +79,6 @@ body {
   border-right: none;
 }
 
-
-
-/* Breadcrumb */
-.breadcrumb-section {
-  background-color: #fff;
-  padding: 10px 0;
-  font-size: 0.8rem;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.breadcrumb-container {
-  display: flex;
-  padding: 20px;
-  align-items: center;
-}
-
-.breadcrumb-item {
-  background-color: #ddd;
-  padding: 5px 12px;
-  margin-right: 10px;
-  border-radius: 4px;
-  display: inline-block;
-  position: relative;
-}
-
-.breadcrumb-item:not(:last-child):after {
-  content: "›";
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #999;
-}
 
 /* Dean Section */
 .dean-section {
@@ -207,6 +152,13 @@ body {
   font-size: 1.1rem;
 }
 
+.dean-social svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+}
+
+
 /* Staff Section */
 .staff-section {
   padding: 60px 0;
@@ -232,9 +184,17 @@ body {
 
 /* Image */
 .staff-image {
-  height: 180px;
+  height: 250px;
   width: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .staff-image {
+    height: 310px;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 /* Card Body */
@@ -310,12 +270,6 @@ body {
   font-size: 0.8rem;
   color: #777;
 }
-
-
-
-
-
-
 
 @media (max-width: 992px) {
   .dean-info h4 {

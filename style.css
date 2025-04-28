@@ -440,7 +440,7 @@ ul {
   border-color: #3270fc;
 }
 .react-header {
-  background: #318447;
+  background: #fff;
   position: relative;
   z-index: 9999;
 }
@@ -453,10 +453,10 @@ ul {
 .react-header .react-menus li a {
   color: #00306e;
 }
-/* .react-header .react-menus li a.react-current-page,
+.react-header .react-menus li a.react-current-page,
 .react-header .react-menus li a:hover {
   color: #d2093c !important;
-} */
+}
 .react-header .react-main-menu {
   position: relative;
 }
@@ -464,7 +464,7 @@ ul {
   max-width: 1340px;
 }
 .react-header .logo {
-  padding: 0 0;
+  padding: 14px 0;
 }
 .react-header.react-header-two {
   box-shadow: 0 4px 10px rgba(0, 14, 32, 0.06);
@@ -794,7 +794,7 @@ ul {
   font-size: 15px;
 }
 .react-header.react-sticky {
-  background: #318447;
+  background: #fff;
   position: fixed !important;
   width: 100%;
   -webkit-animation: stickyanimations 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
@@ -856,10 +856,10 @@ ul {
   width: 19px;
 }
 .react-header .topbar-area.style1 {
-  background: #F4F8FA;
-  color: #343A40;
-  padding: 10px 0;
-  font-size: 16px;
+  background: #00306e;
+  color: #fff;
+  padding: 5px 0;
+  font-size: 14px;
 }
 .react-header .topbar-area.style1 .topbar-contact ul {
   display: flex;
@@ -867,18 +867,6 @@ ul {
 .react-header .topbar-area.style1 .topbar-contact ul li {
   margin-left: 30px;
 }
-
-.react-header .topbar-area.style1 li {
-  display: inline-block;
-  border-right: 1px solid #ccc; 
-  padding: 0 10px;
-}
-
-.react-header .topbar-area.style1 li:last-child {
-  border-right: none; /* remove border on the last item */
-}
-
-
 .react-header .topbar-area.style1 .topbar-contact ul li svg {
   width: 18px;
   padding-right: 2px;
@@ -887,11 +875,11 @@ ul {
   margin-left: 0;
 }
 .react-header .topbar-area.style1 li a {
-  color: #343A40;
-  padding: 0 6px;
-  font-size: 14px;
+  color: #fff;
 }
-
+.react-header .topbar-area.style1 li a:hover {
+  color: #b5b2b2;
+}
 .react-header .topbar-area.style1 ul.social-links li {
   margin-right: 15px;
 }
@@ -903,7 +891,7 @@ ul {
 }
 .react-header .topbar-area.style1 ul.social-links li a:hover {
   background: 0 0;
-  color: #343A40;
+  color: #b5b2b2;
 }
 .react-sub-shadow li ul.sub-menu {
   box-shadow: 0 30px 30px 0 rgba(10, 0, 45, 0.1);
@@ -12231,7 +12219,7 @@ body.event-page .react-upcoming__event .event__card .event_time {
   border-radius: 3px;
 }
 #backscrollUp.home {
-  background: #318447;
+  background: #d2093c;
 }
 #backscrollUp span {
   width: 40px;
