@@ -16,11 +16,11 @@ body {
 .banner-text {
   padding: 20px;
   color: #333;
-  text-align: center;
+  text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   height: 100%;
 }
 
@@ -51,14 +51,6 @@ body {
   transition: ease-in-out 0.3s;
 }
 
-.learn-more-btn:hover {
-  background-color: transparent;
-  color: black;
-  border: 1px solid #318447;
-}
-
-
-
 .achievements {
   background-color: #343a40;
   color: white;
@@ -69,7 +61,6 @@ body {
   font-weight: 600;
   padding-bottom: 30px;
   color: #fff;
-
 }
 
 .achievement-card {
